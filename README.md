@@ -7,7 +7,7 @@
 **Nacionalitat:** Espanyol  
 **Ubicació:** Blanes, Girona  
 **Correu:** [alexpicacastro@gmail.com](mailto:alexpicacastro@gmail.com) | [a.pica@sapalomera.cat](mailto:a.pica@sapalomera.cat)  
-**Telèfon:** (+34) 640 908 980  
+**Telèfon:** 640 908 980  
 
 ### Presentació Personal
 Em dic Alex Pica i sóc tècnic en Sistemes Microinformàtics i Xarxes amb formació en l'administració de sistemes informàtics. Després d'haver fet el grau mitjà en SMX, actualment estic cursant el grau superior en Administració de Sistemes Informàtics en Xarxa (ASIX). Persona proactiva, responsable i apassionada per la gestió de xarxes i la seguretat informàtica.
