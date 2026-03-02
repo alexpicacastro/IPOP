@@ -3,9 +3,7 @@
 ## 👤 Qui soc jo?
 
 **Nom:** Àlex Pica Castro  
-**Data de naixement:** 07-10-2005  
-**Nacionalitat:** Espanyol  
-**Ubicació:** Blanes, Girona  
+**Data de naixement:** 07-10-2005   
 **Correu:** [alexpicacastro@gmail.com](mailto:alexpicacastro@gmail.com) | [a.pica@sapalomera.cat](mailto:a.pica@sapalomera.cat)  
 **Telèfon:** 640 908 980  
 
