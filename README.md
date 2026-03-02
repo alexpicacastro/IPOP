@@ -125,5 +125,5 @@ Empatia, amabilitat i respecte. Gran capacitat de comunicació per explicar solu
 
 - **Correu Institucional:** [a.pica@sapalomera.cat](mailto:a.pica@sapalomera.cat)
 - **Correu Personal:** [alexpicacastro@gmail.com](mailto:alexpicacastro@gmail.com)
-- **Telèfon:** (+34) 640 908 980
+- **Telèfon:** 640 908 980
 - **GitHub:** [github.com/alexpicacastro](https://github.com/alexpicacastro)
