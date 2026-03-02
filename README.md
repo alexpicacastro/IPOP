@@ -14,7 +14,7 @@ Em dic Alex Pica i sóc tècnic en Sistemes Microinformàtics i Xarxes amb forma
 
 ### Currículum
 
-![Uploading image.png…]()
+Curriculum Catala CV.jpg
 
 
 ---
