@@ -32,14 +32,6 @@ Em dic Alex Pica i sóc tècnic en Sistemes Microinformàtics i Xarxes amb forma
 - Manteniment i administració de xarxes locals.
 - Resolució de problemes de hardware i software.
 
-### Dependent i Caixer — Water World, Lloret de Mar
-**Període:** 01/06/2024 – 31/08/2024
-- Atenció directa a l'usuari i gestió de queixes de manera eficient.
-- Cobrament en caixa i control de la caixa diària.
-- Informació i assistència als usuaris sobre serveis.
-- Despatxar comandes, fer cobraments i devolució de canvi.
-- Passar comandes als companys i lliurar-los al client.
-
 ---
 
 ## 📋 Perfil Professional
