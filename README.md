@@ -12,6 +12,10 @@
 ### Presentació Personal
 Em dic Alex Pica i sóc tècnic en Sistemes Microinformàtics i Xarxes amb formació en l'administració de sistemes informàtics. Després d'haver fet el grau mitjà en SMX, actualment estic cursant el grau superior en Administració de Sistemes Informàtics en Xarxa (ASIX). Persona proactiva, responsable i apassionada per la gestió de xarxes i la seguretat informàtica.
 
+### Currículum
+
+
+
 ---
 
 ## 🎓 Formació Acadèmica
