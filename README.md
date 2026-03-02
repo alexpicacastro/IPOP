@@ -60,9 +60,6 @@ Configurar, administrar i mantenir sistemes informàtics, garantint la funcional
 - Xarxes
 - Treball en equip
 
-### Eines Digitals
-Microsoft Office | Microsoft Word | Microsoft Excel | Gmail | Microsoft PowerPoint | Google Drive | Zoom | Instagram | Skype | Social Media | Google Docs | Internet user | Power Point
-
 ### Habilitats Organitzatives
 Organitzat, attent, responsable i treballador.
 
