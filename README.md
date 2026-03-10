@@ -120,4 +120,4 @@ Empatia, amabilitat i respecte. Gran capacitat de comunicació per explicar solu
 - **Telèfon:** 640 908 980
 - **GitHub:** [github.com/alexpicacastro](https://github.com/alexpicacastro)
 - **Wix:** [https://apica3.wixsite.com/website](https://apica3.wixsite.com/website)
-- **
+- **LinkedIn:** [https://www.linkedin.com/in/alexpicacastro/](https://www.linkedin.com/in/alexpicacastro/)
