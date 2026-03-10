@@ -61,7 +61,7 @@ Configurar, administrar i mantenir sistemes informàtics, garantint la funcional
 - Treball en equip
 
 ### Habilitats Organitzatives
-Organitzat, attent, responsable i treballador.
+Organitzat, atent, responsable i treballador.
 
 ### Habilitats de Comunicació i Interpersonals
 Empatia, amabilitat i respecte. Gran capacitat de comunicació per explicar solucions tècniques a usuaris no experts.
@@ -107,7 +107,7 @@ Empatia, amabilitat i respecte. Gran capacitat de comunicació per explicar solu
 
 ## 🎯 Objectius Professionals
 
-**Meta:** Assolir un nivell tècnic avançat que permeti ocupar llocs de responsabilitat en l'administració de xarxes i sistemes dins de mitjanes o grans empresas.
+**Meta:** Especialitzar-me en administració de sistemes i xarxes amb l’objectiu de treballar com a administrador de sistemes o tècnic de xarxes dins de mitjanes o grans empresas.
 
 **Itinerari:** El pla actual es centra en finalitzar amb èxit el CFGS d'ASIX el 2026 per consolidar el perfil tècnic.
 
