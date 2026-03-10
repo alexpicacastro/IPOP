@@ -21,7 +21,7 @@ Em dic Alex Pica i sóc tècnic en Sistemes Microinformàtics i Xarxes amb forma
 
 | Període | Titulació | Centre | Nivell EQF |
 |---------|-----------|--------|------------|
-| 2023 - 2025 | CFGS Administració de Sistemes Informàtics en Xarxa (ASIX) | Institut Sapalomera | EQF 5 |
+| 2023 - 2026 | CFGS Administració de Sistemes Informàtics en Xarxa (ASIX) | Institut Sapalomera | EQF 5 |
 | 2021 - 2023 | CFGM Sistemes Microinformàtics i Xarxes (SMX) | Institut Sa Palomera | EQF 4 |
 | 2017 - 2021 | ESO | IES Serrallarga | EQF 3 |
 
@@ -109,7 +109,7 @@ Empatia, amabilitat i respecte. Gran capacitat de comunicació per explicar solu
 
 **Meta:** Assolir un nivell tècnic avançat que permeti ocupar llocs de responsabilitat en l'administració de xarxes i sistemes dins de mitjanes o grans empresas.
 
-**Itinerari:** El pla actual es centra en finalitzar amb èxit el CFGS d'ASIX el 2025 per consolidar el perfil tècnic.
+**Itinerari:** El pla actual es centra en finalitzar amb èxit el CFGS d'ASIX el 2026 per consolidar el perfil tècnic.
 
 ---
 
