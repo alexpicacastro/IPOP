@@ -14,28 +14,17 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        /* ===== CSS Variables & Reset ===== */
+        /* Estil Document / PDF - Estàtic i Pla */
+        /* Estil Document / PDF - Estàtic i Pla */
         :root {
-            --bg-primary: #0a0e17;
-            --bg-secondary: #111827;
-            --bg-card: rgba(17, 24, 39, 0.7);
-            --bg-card-hover: rgba(30, 41, 59, 0.8);
-            --border-card: rgba(99, 102, 241, 0.15);
-            --border-card-hover: rgba(99, 102, 241, 0.4);
-            --text-primary: #f1f5f9;
-            --text-secondary: #94a3b8;
-            --text-muted: #64748b;
-            --accent-primary: #6366f1;
-            --accent-secondary: #818cf8;
-            --accent-glow: rgba(99, 102, 241, 0.3);
-            --gradient-1: linear-gradient(135deg, #6366f1, #8b5cf6, #a78bfa);
-            --gradient-2: linear-gradient(135deg, #06b6d4, #3b82f6, #6366f1);
-            --gradient-3: linear-gradient(135deg, #f59e0b, #ef4444, #ec4899);
-            --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
-            --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.15);
-            --radius: 16px;
-            --radius-sm: 10px;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --bg-primary: #f1f5f9;    /* Gris clar formal per evitar fatiga visual */
+            --bg-secondary: #ffffff;  /* Blanc pur per les targetes */
+            --border-card: #cbd5e1;
+            --text-primary: #0f172a;
+            --text-secondary: #334155;
+            --accent-primary: #1e40af;
+            --accent-secondary: #2563eb;
+            --radius: 4px;
         }
 
         *,
@@ -44,6 +33,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            transition: none !important;
+            animation: none !important;
         }
 
         html {
@@ -58,78 +49,25 @@
             overflow-x: hidden;
         }
 
-        /* ===== Background Effects ===== */
+        /* Desactivar efectes de fons */
         .bg-effects {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            pointer-events: none;
-            overflow: hidden;
+            display: none;
         }
 
-        .bg-orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.4;
-            animation: float 20s ease-in-out infinite;
-        }
-
-        .bg-orb:nth-child(1) {
-            width: 500px;
-            height: 500px;
-            background: rgba(99, 102, 241, 0.15);
-            top: -100px;
-            right: -100px;
-            animation-delay: 0s;
-        }
-
-        .bg-orb:nth-child(2) {
-            width: 400px;
-            height: 400px;
-            background: rgba(139, 92, 246, 0.1);
-            bottom: 20%;
-            left: -80px;
-            animation-delay: -7s;
-        }
-
-        .bg-orb:nth-child(3) {
-            width: 350px;
-            height: 350px;
-            background: rgba(6, 182, 212, 0.08);
-            top: 50%;
-            right: 10%;
-            animation-delay: -14s;
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translate(0, 0) scale(1);
-            }
-
-            33% {
-                transform: translate(30px, -30px) scale(1.05);
-            }
-
-            66% {
-                transform: translate(-20px, 20px) scale(0.95);
-            }
-        }
-
-        /* ===== Navigation ===== */
-        .nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            padding: 1rem 2rem;
-            backdrop-filter: blur(20px);
-            background: rgba(10, 14, 23, 0.85);
+        /* Capçalera estàtica simple */
+        .header {
+            padding: 2rem 0;
             border-bottom: 1px solid var(--border-card);
-            transition: var(--transition);
+            margin-bottom: 3rem;
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.5rem;
         }
 
         .nav-inner {
@@ -143,10 +81,7 @@
         .nav-logo {
             font-size: 1.25rem;
             font-weight: 700;
-            background: var(--gradient-1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--text-primary);
             letter-spacing: -0.5px;
             text-decoration: none;
         }
@@ -165,12 +100,10 @@
             font-weight: 500;
             padding: 0.4rem 0.8rem;
             border-radius: 8px;
-            transition: var(--transition);
         }
 
         .nav-links a:hover {
-            color: var(--text-primary);
-            background: rgba(99, 102, 241, 0.1);
+            text-decoration: underline;
         }
 
         .nav-toggle {
@@ -197,30 +130,8 @@
 
         /* ===== Hero Section ===== */
         .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding-top: 80px;
-        }
-
-        .hero-content {
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-            background: rgba(99, 102, 241, 0.1);
-            border: 1px solid rgba(99, 102, 241, 0.3);
-            color: var(--accent-secondary);
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-bottom: 2rem;
+            padding: 2rem 0;
+            text-align: left;
         }
 
         .hero h1 {
@@ -231,11 +142,8 @@
             letter-spacing: -2px;
         }
 
-        .hero h1 .gradient-text {
-            background: var(--gradient-1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .hero h1 .accent-text {
+            color: var(--accent-secondary);
         }
 
         .hero-subtitle {
@@ -258,24 +166,21 @@
             align-items: center;
             gap: 0.5rem;
             padding: 0.75rem 1.5rem;
-            border-radius: 12px;
+            border-radius: 8px;
             font-size: 0.9rem;
             font-weight: 600;
             text-decoration: none;
-            transition: var(--transition);
             cursor: pointer;
             border: none;
         }
 
         .btn-primary {
-            background: var(--gradient-1);
+            background: var(--accent-primary);
             color: white;
-            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.5);
+            background: var(--accent-secondary);
         }
 
         .btn-outline {
@@ -285,22 +190,11 @@
         }
 
         .btn-outline:hover {
-            background: rgba(99, 102, 241, 0.1);
+            background: rgba(255, 255, 255, 0.05);
             border-color: var(--accent-primary);
-            transform: translateY(-2px);
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
 
         /* ===== Section Headers ===== */
         .section-header {
@@ -335,20 +229,14 @@
 
         /* ===== Cards ===== */
         .card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-card);
-            border-radius: var(--radius);
-            padding: 2rem;
-            backdrop-filter: blur(10px);
-            box-shadow: var(--shadow-card);
-            transition: var(--transition);
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border-card);
+            padding: 1.5rem 0;
+            margin-bottom: 1rem;
         }
 
         .card:hover {
-            border-color: var(--border-card-hover);
-            background: var(--bg-card-hover);
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-glow);
+            border-color: var(--border-card);
         }
 
         /* ===== About Section ===== */
@@ -409,7 +297,7 @@
             top: 0;
             bottom: 0;
             width: 2px;
-            background: linear-gradient(to bottom, var(--accent-primary), transparent);
+            background: var(--border-card);
         }
 
         .timeline-item {
@@ -426,7 +314,6 @@
             height: 12px;
             border-radius: 50%;
             background: var(--accent-primary);
-            box-shadow: 0 0 10px var(--accent-glow);
         }
 
         .timeline-period {
@@ -472,7 +359,7 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: var(--gradient-2);
+            background: var(--accent-primary);
         }
 
         .experience-card h3 {
@@ -573,7 +460,7 @@
             background: rgba(99, 102, 241, 0.15);
             border-color: rgba(99, 102, 241, 0.35);
             color: var(--text-primary);
-            transform: translateY(-2px);
+
         }
 
         .skill-tags {
@@ -637,22 +524,21 @@
         .language-bar {
             height: 100%;
             border-radius: 50px;
-            transition: width 1.5s ease-out;
         }
 
         .bar-native {
             width: 100%;
-            background: var(--gradient-1);
+            background: var(--accent-primary);
         }
 
         .bar-b1 {
             width: 60%;
-            background: var(--gradient-2);
+            background: var(--accent-secondary);
         }
 
         .bar-basic {
             width: 30%;
-            background: var(--gradient-3);
+            background: var(--border-card);
         }
 
         /* ===== Certificates ===== */
@@ -674,8 +560,7 @@
         }
 
         .cert-item:hover {
-            border-color: var(--border-card-hover);
-            transform: translateX(6px);
+            border-color: var(--accent-primary);
         }
 
         .cert-icon {
@@ -710,7 +595,7 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: var(--gradient-3);
+            background: var(--border-card);
         }
 
         .objectives-card h3 {
@@ -813,15 +698,9 @@
             width: 100%;
             max-height: 400px;
             object-fit: contain;
-            border-radius: var(--radius-sm);
+            border-radius: 4px;
             margin-bottom: 1rem;
-            transition: var(--transition);
-            opacity: 0.9;
-        }
-
-        .cv-card:hover img {
             opacity: 1;
-            transform: scale(1.02);
         }
 
         .cv-card h3 {
@@ -845,26 +724,54 @@
         }
 
         footer .footer-name {
-            background: var(--gradient-1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--text-primary);
             font-weight: 600;
         }
 
         /* ===== Scroll Animations ===== */
         .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            opacity: 1 !important;
+            transform: none !important;
         }
 
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
+        /* ===== Lightbox ===== */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            cursor: pointer;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 95%;
+            max-height: 95vh;
+            object-fit: contain;
+            border-radius: 4px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            color: white;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
         }
 
         /* ===== Responsive ===== */
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -872,8 +779,7 @@
                 top: 100%;
                 left: 0;
                 right: 0;
-                background: rgba(10, 14, 23, 0.95);
-                backdrop-filter: blur(20px);
+                background: rgba(10, 14, 23, 0.98);
                 flex-direction: column;
                 padding: 1rem;
                 border-bottom: 1px solid var(--border-card);
@@ -899,84 +805,21 @@
                 font-size: 2.5rem;
             }
         }
-
-        /* ===== Lightbox ===== */
-        .lightbox {
-            display: none;
-            position: fixed;
-            inset: 0;
-            z-index: 1000;
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(10px);
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            padding: 2rem;
-        }
-
-        .lightbox.active {
-            display: flex;
-        }
-
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90vh;
-            object-fit: contain;
-            border-radius: var(--radius);
-            box-shadow: 0 0 60px rgba(0, 0, 0, 0.5);
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            width: 48px;
-            height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            border: none;
-            transition: var(--transition);
-        }
-
-        .lightbox-close:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
     </style>
 </head>
 
 <body>
 
-    <!-- Background Effects -->
-    <div class="bg-effects">
-        <div class="bg-orb"></div>
-        <div class="bg-orb"></div>
-        <div class="bg-orb"></div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">AP</a>
-            <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about">Sobre mi</a></li>
-                <li><a href="#education">Formació</a></li>
-                <li><a href="#experience">Experiència</a></li>
-                <li><a href="#skills">Habilitats</a></li>
-                <li><a href="#certificates">Certificats</a></li>
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="nav-logo">Àlex Pica Castro</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inici</a></li>
                 <li><a href="projectes.html">Projectes</a></li>
-                <li><a href="#contact">Contacte</a></li>
+                <li><a href="documentacio.html">Documentació</a></li>
             </ul>
         </div>
-    </nav>
+    </header>
 
     <main>
         <!-- Hero Section -->
@@ -987,7 +830,7 @@
                     CFGS ASIX — En curs
                 </div>
                 <h1>
-                    Sóc <span class="gradient-text">Àlex Pica Castro</span><br>
+                    Sóc <span class="accent-text">Àlex Pica Castro</span><br>
                     Tècnic en Sistemes
                 </h1>
                 <p class="hero-subtitle">
@@ -996,13 +839,13 @@
                 </p>
                 <div class="hero-links">
                     <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-envelope"></i> Contacta'm
+                        Contacta'm
                     </a>
                     <a href="projectes.html" class="btn btn-outline">
-                        <i class="fas fa-folder-open"></i> Projectes
+                        Projectes
                     </a>
                     <a href="#cv" class="btn btn-outline">
-                        <i class="fas fa-file-alt"></i> Veure CV
+                        Veure CV
                     </a>
                 </div>
             </div>
@@ -1011,7 +854,6 @@
         <!-- About Section -->
         <section id="about" class="reveal">
             <div class="section-header">
-                <div class="section-icon"><i class="fas fa-user"></i></div>
                 <h2>Qui soc jo?</h2>
                 <p>Presentació personal i informació de contacte</p>
             </div>
@@ -1029,7 +871,6 @@
         <!-- Education Section -->
         <section id="education" class="reveal">
             <div class="section-header">
-                <div class="section-icon"><i class="fas fa-graduation-cap"></i></div>
                 <h2>Formació Acadèmica</h2>
                 <p>El meu recorregut educatiu</p>
             </div>
@@ -1060,14 +901,13 @@
         <!-- Experience Section -->
         <section id="experience" class="reveal">
             <div class="section-header">
-                <div class="section-icon"><i class="fas fa-briefcase"></i></div>
                 <h2>Experiència Laboral</h2>
                 <p>On he posat en pràctica els meus coneixements</p>
             </div>
             <div class="card experience-card">
                 <h3>Tècnic en Sistemes</h3>
                 <div class="role-company">
-                    <i class="fas fa-building"></i> Institut S'Agulla, Blanes — Pràctiques (2022–2023)
+                    Institut S'Agulla, Blanes — Pràctiques (2022–2023)
                 </div>
                 <ul>
                     <li>Instal·lació i configuració de sistemes operatius Windows i Linux</li>
@@ -1078,7 +918,7 @@
             <div class="card experience-card">
                 <h3>Desenvolupador i Tècnic de Sistemes</h3>
                 <div class="role-company">
-                    <i class="fas fa-building"></i> Orbitwave, Portugal — Erasmus+ (2024–2025)
+                    Orbitwave, Portugal — Erasmus+ (2024–2025)
                 </div>
                 <ul>
                     <li>Disseny i implementació d'un programari per a l'optimització i gestió de sistemes informàtics
@@ -1093,28 +933,23 @@
         <!-- Professional Profile -->
         <section id="profile" class="reveal">
             <div class="section-header">
-                <div class="section-icon"><i class="fas fa-id-card"></i></div>
                 <h2>Perfil Professional</h2>
                 <p>Identificació del títol i competència general</p>
             </div>
             <div class="profile-grid">
                 <div class="card profile-card">
-                    <div class="profile-icon">🎓</div>
                     <h3>Títol</h3>
                     <p>Administració de sistemes informàtics en xarxa</p>
                 </div>
                 <div class="card profile-card">
-                    <div class="profile-icon">📊</div>
                     <h3>Nivell</h3>
                     <p>Formació professional de grau superior</p>
                 </div>
                 <div class="card profile-card">
-                    <div class="profile-icon">💻</div>
                     <h3>Família professional</h3>
                     <p>Informàtica i comunicacions</p>
                 </div>
                 <div class="card profile-card">
-                    <div class="profile-icon">⏱️</div>
                     <h3>Durada</h3>
                     <p>2.000 hores</p>
                 </div>
@@ -1133,35 +968,34 @@
         <!-- Skills Section -->
         <section id="skills" class="reveal">
             <div class="section-header">
-                <div class="section-icon"><i class="fas fa-code"></i></div>
                 <h2>Competències i Habilitats</h2>
                 <p>Les meves capacitats tècniques i personals</p>
             </div>
             <div class="skills-grid">
                 <div class="card skill-category">
-                    <h3><i class="fas fa-laptop-code" style="color: var(--accent-secondary);"></i> Aptituds Tècniques
+                    <h3>Aptituds Tècniques
                     </h3>
                     <div class="skill-tags">
-                        <span class="skill-tag"><i class="fas fa-code"></i> Programació</span>
-                        <span class="skill-tag"><i class="fas fa-database"></i> Base de dades</span>
-                        <span class="skill-tag"><i class="fab fa-windows"></i> Windows</span>
-                        <span class="skill-tag"><i class="fab fa-linux"></i> Linux</span>
-                        <span class="skill-tag"><i class="fas fa-file-word"></i> Ofimàtica Office</span>
-                        <span class="skill-tag"><i class="fas fa-network-wired"></i> Xarxes</span>
-                        <span class="skill-tag"><i class="fas fa-users"></i> Treball en equip</span>
+                        <span class="skill-tag">Programació</span>
+                        <span class="skill-tag">Base de dades</span>
+                        <span class="skill-tag">Windows</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Ofimàtica Office</span>
+                        <span class="skill-tag">Xarxes</span>
+                        <span class="skill-tag">Treball en equip</span>
                     </div>
                 </div>
                 <div class="card skill-category">
-                    <h3><i class="fas fa-brain" style="color: var(--accent-secondary);"></i> Habilitats Personals</h3>
+                    <h3>Habilitats Personals</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag"><i class="fas fa-check-circle"></i> Organitzat</span>
-                        <span class="skill-tag"><i class="fas fa-eye"></i> Atent</span>
-                        <span class="skill-tag"><i class="fas fa-shield-alt"></i> Responsable</span>
-                        <span class="skill-tag"><i class="fas fa-hammer"></i> Treballador</span>
-                        <span class="skill-tag"><i class="fas fa-heart"></i> Empatia</span>
-                        <span class="skill-tag"><i class="fas fa-smile"></i> Amabilitat</span>
-                        <span class="skill-tag"><i class="fas fa-handshake"></i> Respecte</span>
-                        <span class="skill-tag"><i class="fas fa-comments"></i> Comunicació</span>
+                        <span class="skill-tag">Organitzat</span>
+                        <span class="skill-tag">Atent</span>
+                        <span class="skill-tag">Responsable</span>
+                        <span class="skill-tag">Treballador</span>
+                        <span class="skill-tag">Empatia</span>
+                        <span class="skill-tag">Amabilitat</span>
+                        <span class="skill-tag">Respecte</span>
+                        <span class="skill-tag">Comunicació</span>
                     </div>
                 </div>
             </div>
@@ -1170,34 +1004,33 @@
         <!-- Languages Section -->
         <section id="languages" class="reveal">
             <div class="section-header">
-                <div class="section-icon"><i class="fas fa-globe"></i></div>
                 <h2>Idiomes</h2>
                 <p>Competències lingüístiques</p>
             </div>
             <div class="languages-grid">
                 <div class="card language-card">
-                    <div class="language-name">🇪🇸 Castellà</div>
+                    <div class="language-name">Castellà</div>
                     <span class="language-level level-native">Natiu</span>
                     <div class="language-bar-container">
                         <div class="language-bar bar-native"></div>
                     </div>
                 </div>
                 <div class="card language-card">
-                    <div class="language-name">🏴 Català</div>
+                    <div class="language-name">Català</div>
                     <span class="language-level level-native">Natiu</span>
                     <div class="language-bar-container">
                         <div class="language-bar bar-native"></div>
                     </div>
                 </div>
                 <div class="card language-card">
-                    <div class="language-name">🇬🇧 Anglès</div>
+                    <div class="language-name">Anglès</div>
                     <span class="language-level level-b1">Mitjà — B1</span>
                     <div class="language-bar-container">
                         <div class="language-bar bar-b1"></div>
                     </div>
                 </div>
                 <div class="card language-card">
-                    <div class="language-name">🇵🇹 Portuguès</div>
+                    <div class="language-name">Portuguès</div>
                     <span class="language-level level-basic">Baix</span>
                     <div class="language-bar-container">
                         <div class="language-bar bar-basic"></div>
@@ -1209,7 +1042,6 @@
         <!-- Certificates Section -->
         <section id="certificates" class="reveal">
             <div class="section-header">
-                <div class="section-icon"><i class="fas fa-certificate"></i></div>
                 <h2>Certificats</h2>
                 <p>Formació complementària i certificacions</p>
             </div>
@@ -1280,15 +1112,14 @@
         <!-- Objectives Section -->
         <section id="objectives" class="reveal">
             <div class="section-header">
-                <div class="section-icon"><i class="fas fa-bullseye"></i></div>
                 <h2>Objectius Professionals</h2>
                 <p>On vull arribar professionalment</p>
             </div>
             <div class="card objectives-card">
-                <h3>🎯 Meta</h3>
+                <h3>Meta</h3>
                 <p>Especialitzar-me en administració de sistemes i xarxes amb l'objectiu de treballar com a
                     administrador de sistemes o tècnic de xarxes dins de mitjanes o grans empresas.</p>
-                <h3>🗺️ Itinerari</h3>
+                <h3>Itinerari</h3>
                 <p>El pla actual es centra en finalitzar amb èxit el CFGS d'ASIX el 2026 per consolidar el perfil
                     tècnic.</p>
             </div>
@@ -1297,7 +1128,6 @@
         <!-- CV Section -->
         <section id="cv" class="reveal">
             <div class="section-header">
-                <div class="section-icon"><i class="fas fa-file-alt"></i></div>
                 <h2>Currículum Vitae</h2>
                 <p>Fes clic per veure en gran</p>
             </div>
@@ -1316,48 +1146,47 @@
         <!-- Contact Section -->
         <section id="contact" class="reveal">
             <div class="section-header">
-                <div class="section-icon"><i class="fas fa-paper-plane"></i></div>
                 <h2>Contacte</h2>
                 <p>No dubtis en contactar-me</p>
             </div>
             <div class="contact-grid">
                 <a href="mailto:a.pica@sapalomera.cat" class="card contact-card">
-                    <div class="contact-icon email"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-icon email">Email</div>
                     <div>
                         <div class="contact-label">Correu Institucional</div>
                         <div class="contact-value">a.pica@sapalomera.cat</div>
                     </div>
                 </a>
                 <a href="mailto:alexpicacastro@gmail.com" class="card contact-card">
-                    <div class="contact-icon email"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-icon email">Email</div>
                     <div>
                         <div class="contact-label">Correu Personal</div>
                         <div class="contact-value">alexpicacastro@gmail.com</div>
                     </div>
                 </a>
                 <a href="tel:+34640908980" class="card contact-card">
-                    <div class="contact-icon phone"><i class="fas fa-phone"></i></div>
+                    <div class="contact-icon phone">Telèfon</div>
                     <div>
                         <div class="contact-label">Telèfon</div>
                         <div class="contact-value">640 908 980</div>
                     </div>
                 </a>
                 <a href="https://github.com/alexpicacastro" target="_blank" class="card contact-card">
-                    <div class="contact-icon github"><i class="fab fa-github"></i></div>
+                    <div class="contact-icon github">GitHub</div>
                     <div>
                         <div class="contact-label">GitHub</div>
                         <div class="contact-value">alexpicacastro</div>
                     </div>
                 </a>
                 <a href="https://www.linkedin.com/in/alexpicacastro/" target="_blank" class="card contact-card">
-                    <div class="contact-icon linkedin"><i class="fab fa-linkedin"></i></div>
+                    <div class="contact-icon linkedin">LinkedIn</div>
                     <div>
                         <div class="contact-label">LinkedIn</div>
                         <div class="contact-value">alexpicacastro</div>
                     </div>
                 </a>
                 <a href="https://apica3.wixsite.com/website" target="_blank" class="card contact-card">
-                    <div class="contact-icon web"><i class="fas fa-globe"></i></div>
+                    <div class="contact-icon web">Web</div>
                     <div>
                         <div class="contact-label">Web Personal</div>
                         <div class="contact-value">apica3.wixsite.com</div>
@@ -1367,50 +1196,17 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>© 2026 <span class="footer-name">Àlex Pica Castro</span> — IPOP · Informe Personal d'Orientació Professional
-        </p>
+        <p>© 2026 Àlex Pica Castro — IPOP · Informe Personal d'Orientació Professional</p>
     </footer>
 
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-        <button class="lightbox-close" onclick="closeLightbox()">
-            <i class="fas fa-times"></i>
-        </button>
-        <img id="lightbox-img" src="" alt="CV ampliada">
+        <button class="lightbox-close">&times;</button>
+        <img id="lightbox-img" src="" alt="Ampliació">
     </div>
 
     <script>
-        // ===== Mobile Navigation =====
-        function toggleNav() {
-            document.getElementById('navLinks').classList.toggle('active');
-        }
-
-        // Close nav when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('navLinks').classList.remove('active');
-            });
-        });
-
-        // ===== Scroll Reveal =====
-        const revealElements = document.querySelectorAll('.reveal');
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
-
-        revealElements.forEach(el => observer.observe(el));
-
-        // ===== Lightbox =====
         function openLightbox(src) {
             const lightbox = document.getElementById('lightbox');
             const img = document.getElementById('lightbox-img');
@@ -1425,19 +1221,8 @@
             document.body.style.overflow = '';
         }
 
-        // Close with Escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeLightbox();
-        });
-
-        // ===== Navbar background on scroll =====
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('nav');
-            if (window.scrollY > 50) {
-                nav.style.background = 'rgba(10, 14, 23, 0.95)';
-            } else {
-                nav.style.background = 'rgba(10, 14, 23, 0.85)';
-            }
         });
     </script>
 </body>
